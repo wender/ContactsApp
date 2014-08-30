@@ -1,0 +1,38 @@
+<a ng-click="list()" class="btn btn-primary">List Contacts</a>
+<h1>Edit contact {{contact.name}}</h1>
+
+<form novalidate="novalidate" class="form-horizontal">
+    <div class="row">
+        <div class="control-group col-lg-5 col-md-5 col-sm-7 col-xs-10">
+            <label class="control-label" for="inputName">Name:</label>
+            <div class="controls">
+                <input type="text" id="inputName" ng-model="contact.name" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-group col-lg-5 col-md-5 col-sm-7 col-xs-10">
+            <label class="control-label" for="inputAddress">Address:</label>
+            <div class="controls">
+                <input type="text" id="inputAddress" ng-model="contact.address" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-group col-lg-5 col-md-5 col-sm-7 col-xs-10">
+            <label class="control-label" for="inputPhone">Phone:</label>
+            <div class="controls">
+                <input type="text" id="inputPhone" ng-model="contact.phone" class="form-control" mask="0.000.000.0000"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-group col-lg-5 col-md-5 col-sm-7 col-xs-10 M-t">
+            <div class="controls">
+                <input type="hidden" ng-model="contact.id"/>
+                <a ng-click="list()" class="btn btn-small">Cancel</a>
+                <a ng-click="updateContact()" class="btn btn-small btn-primary" id="save">Save</a>
+            </div>
+        </div>
+    </div>
+</form>
